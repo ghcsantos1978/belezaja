@@ -9,24 +9,36 @@
 </h:head>
 <h:body>
 	<pm:page id="login">
-		<pm:header>
-			<p:outputLabel value="Login - Beleza Online"></p:outputLabel>
-		</pm:header>
 		<pm:content>
 			<h:form id="loginForm">
-				<pm:field>
-					<p:outputLabel value="Login(Email):"></p:outputLabel>
-					<p:inputText id="email" value="#{loginMB.usuario.email}"></p:inputText>
-				</pm:field>
-				<pm:field>
-					<p:outputLabel value="Senha:"></p:outputLabel>
-					<p:password id="password" value="#{loginMB.usuario.senha}"></p:password>
-				</pm:field>
-				<pm:field>
-					<p:commandButton value="Login" action="#{loginMB.logar}"/>
-					<p:commandButton value="Novo Usuário" action="#{loginMB.cadastro}"/>
-					<p:commandLink value="Esqueceu sua senha?" action="#{loginMB.esqueceuSenha}"/>
-				</pm:field>
+				<p:panel>
+					<f:facet name="header">
+						Login
+					</f:facet>
+					<pm:field>
+					    <p:outputLabel for="tipoUsuario" value="Perfil de Usuário" />
+					    <p:selectOneMenu id="tipoUsuario" value="#{loginMB.tipoUsuario}" >
+					        <f:selectItem itemLabel="Selecione seu Perfil" itemValue="" />
+					        <f:selectItem itemLabel="Cliente" itemValue="F" />
+					        <f:selectItem itemLabel="Profissional" itemValue="P" />
+					        <f:selectItem itemLabel="Salão" itemValue="J" />
+					    </p:selectOneMenu>
+					</pm:field>
+		
+					<pm:field>
+						<p:outputLabel value="Login(Email):"></p:outputLabel>
+						<p:inputText id="email" value="#{loginMB.usuario.email}"></p:inputText>
+					</pm:field>
+					<pm:field>
+						<p:outputLabel value="Senha:"></p:outputLabel>
+						<p:password id="password" value="#{loginMB.usuario.senha}"></p:password>
+					</pm:field>
+					<pm:field>
+						<p:commandButton value="Login" action="#{loginMB.logar}"/>
+						<p:commandButton value="Novo Usuário" action="#{loginMB.cadastro}"/>
+						<p:commandLink value="Esqueceu sua senha?" action="#{loginMB.esqueceuSenha}"/>
+					</pm:field>
+				</p:panel>
 			</h:form>
 		</pm:content>
 		<pm:footer style="align:center">
