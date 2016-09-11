@@ -1,0 +1,82 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pm="http://primefaces.org/mobile">
+	<f:view renderKitId="PRIMEFACES_MOBILE" />
+
+	<pm:field>
+		<p:outputLabel for="nome" value="Nome:" />
+		<p:inputText id="nome" />
+	</pm:field>
+ 	
+ 	<pm:field>
+	    <p:outputLabel for="cpf" value="CPF:" />
+	    <p:inputText id="cpf" value="#{cadastroPessoaUsuarioMB.pessoaFisica.cpf}" />
+	</pm:field>
+
+ 	<pm:field>
+	    <p:outputLabel for="cepPF" value="CEP:" />
+	    <p:inputText id="cepPF" value="#{cadastroPessoaUsuarioMB.pessoaFisica.cep}" />
+	</pm:field>
+	
+	<pm:field>
+	    <p:outputLabel for="enderecoPF" value="Endereço" />
+	    <p:inputText id="enderecoPF" value="#{cadastroPessoaUsuarioMB.pessoaFisica.endereco}"  />
+	</pm:field>
+	 
+	<pm:field>
+	    <p:outputLabel for="estadoPF" value="Estado" />
+	    <p:selectOneMenu id="estadoPF" value="#{cadastroPessoaUsuarioMB.pessoaFisica.estado}">
+	        <f:selectItem itemLabel="Selecione seu Estado" itemValue="" />
+	        <f:selectItem itemLabel="RJ" itemValue="RJ" />
+	        <f:selectItem itemLabel="SP" itemValue="SP" />
+	        <f:selectItem itemLabel="MG" itemValue="MG" />
+	    </p:selectOneMenu>
+	</pm:field>
+
+ 	<pm:field>
+	    <p:outputLabel for="cidadePF" value="Cidade:" />
+	    <p:inputText id="cidadePF" value="#{cadastroPessoaUsuarioMB.pessoaFisica.cidade}" />
+	</pm:field>
+	
+ 	<pm:field>
+	    <p:outputLabel for="bairroPF" value="Bairro:" />
+	    <p:inputText id="bairroPF" value="#{cadastroPessoaUsuarioMB.pessoaFisica.bairro}" />
+	</pm:field>
+ 	
+ 	<pm:field>
+	    <p:outputLabel for="complementoPF" value="Complemento:" />
+	    <p:inputText id="complementoPF" value="#{cadastroPessoaUsuarioMB.pessoaFisica.complemento}" />
+	</pm:field>
+
+ 	<pm:field>
+	    <p:outputLabel for="telefoneCelularPF" value="Telefone Celular:" />
+	    <p:inputText id="telefoneCelularPF" value="#{cadastroPessoaUsuarioMB.pessoaFisica.telefoneCelular}"/>
+	</pm:field>
+
+ 	<pm:field>
+	    <p:outputLabel for="telefoneResidencial" value="Telefone Residencial:" />
+	    <p:inputText id="telefoneResidencial" value="#{cadastroPessoaUsuarioMB.pessoaFisica.telefoneResidencial}"  />
+	</pm:field>
+	 
+	<pm:field>
+	    <p:outputLabel for="slider" value="Selecione a distância máxima de busca do profissional ou estabeleciomento" />
+	    <pm:inputSlider id="slider" value="2"/>
+	</pm:field>
+	
+ 	<pm:field>
+	    <p:outputLabel for="emailPF" value="Email/Login:" />
+	    <p:inputText id="emailPF" value="#{cadastroPessoaUsuarioMB.pessoaFisica.usuario.email}" />
+	</pm:field>
+
+	<pm:field>
+		<p:outputLabel value="Senha:"/>
+		<p:password id="senhaPF" value="#{cadastroPessoaUsuarioMB.pessoaFisica.usuario.senha}"/>
+	</pm:field>
+	
+</html>	
+	
+
+	

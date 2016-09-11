@@ -1,39 +1,42 @@
-package br.com.nolimits.apps.mobile.belezaonlinebusiness.entity;
+package br.com.nolimits.apps.mobile.belezaonlinerepository.entity;
+
+import java.io.Serializable;
 
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.OneToOne;
 
 @Entity
-public class Pessoa {
+@Inheritance(strategy = InheritanceType.JOINED)
+public class Pessoa implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8468447514093258529L;
 	@Id
 	@GeneratedValue
-	private Long id;
+	private Long idPessoa;
 	private String endereco;
 	private String cep;
 	private String estado;
 	private String cidade;
 	private String bairro;
-	private String email;
-	private String telefone;
 	private String complemento;
-	@Enumerated(EnumType.ORDINAL)
-	private TipoPessoaEnum tipoPessoa;
 	
-	public TipoPessoaEnum getTipoPessoa() {
-		return tipoPessoa;
+	@OneToOne(fetch = FetchType.LAZY)
+	private Usuario usuario;
+	
+	
+	public Usuario getUsuario() {
+		return usuario;
 	}
-	public void setTipoPessoa(TipoPessoaEnum tipoPessoa) {
-		this.tipoPessoa = tipoPessoa;
-	}
-	public Long getId() {
-		return id;
-	}
-	public void setId(Long id) {
-		this.id = id;
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
 	public String getEndereco() {
 		return endereco;
@@ -65,23 +68,18 @@ public class Pessoa {
 	public void setBairro(String bairro) {
 		this.bairro = bairro;
 	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	public String getTelefone() {
-		return telefone;
-	}
-	public void setTelefone(String telefone) {
-		this.telefone = telefone;
-	}
 	public String getComplemento() {
 		return complemento;
 	}
 	public void setComplemento(String complemento) {
 		this.complemento = complemento;
 	}
+	public Long getIdPessoa() {
+		return idPessoa;
+	}
+	public void setIdPessoa(Long idPessoa) {
+		this.idPessoa = idPessoa;
+	}
+
 	
 }

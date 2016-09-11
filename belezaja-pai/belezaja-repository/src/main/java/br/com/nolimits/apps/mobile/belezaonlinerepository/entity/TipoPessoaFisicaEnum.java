@@ -1,4 +1,4 @@
-package br.com.nolimits.apps.mobile.belezaonlinebusiness.entity;
+package br.com.nolimits.apps.mobile.belezaonlinerepository.entity;
 
 public enum TipoPessoaFisicaEnum {
 

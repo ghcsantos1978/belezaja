@@ -1,0 +1,80 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:pm="http://primefaces.org/mobile">
+	<f:view renderKitId="PRIMEFACES_MOBILE" />
+	
+	<pm:field>
+		<p:outputLabel for="razaoSocial" value="Razão Social:" />
+		<p:inputText id="razaoSocial" value="#{cadastroPessoaUsuarioMB.pessoaJuridica.razaoSocial}" />
+	</pm:field>
+ 	
+ 	<pm:field>
+	    <p:outputLabel for="cnpj" value="CNPJ:" />
+	    <p:inputText id="cnpj" value="#{cadastroPessoaUsuarioMB.pessoaJuridica.cnpj}" />
+	</pm:field>
+
+ 	<pm:field>
+	    <p:outputLabel for="cepPJ" value="CEP:" />
+	    <p:inputText id="cepPJ" value="#{cadastroPessoaUsuarioMB.pessoaJuridica.cep}" />
+	</pm:field>
+	
+	<pm:field>
+	    <p:outputLabel for="enderecoPJ" value="Endereço" />
+	    <p:inputText id="enderecoPJ" value="#{cadastroPessoaUsuarioMB.pessoaJuridica.endereco}"  />
+	</pm:field>
+	 
+	<pm:field>
+	    <p:outputLabel for="estadoPJ" value="Estado" />
+	    <p:selectOneMenu id="estadoPJ" value="#{cadastroPessoaUsuarioMB.pessoaJuridica.estado}">
+	        <f:selectItem itemLabel="Selecione seu Estado" itemValue="" />
+	        <f:selectItem itemLabel="RJ" itemValue="RJ" />
+	        <f:selectItem itemLabel="SP" itemValue="SP" />
+	        <f:selectItem itemLabel="MG" itemValue="MG" />
+	    </p:selectOneMenu>
+	</pm:field>
+
+ 	<pm:field>
+	    <p:outputLabel for="cidadePJ" value="Cidade:" />
+	    <p:inputText id="cidadePJ" value="#{cadastroPessoaUsuarioMB.pessoaJuridica.cidade}" />
+	</pm:field>
+	
+ 	<pm:field>
+	    <p:outputLabel for="bairroPJ" value="Bairro:" />
+	    <p:inputText id="bairroPJ" value="#{cadastroPessoaUsuarioMB.pessoaJuridica.bairro}" />
+	</pm:field>
+	 
+ 	<pm:field>
+	    <p:outputLabel for="complementoPJ" value="Complemento:" />
+	    <p:inputText id="complementoPJ" value="#{cadastroPessoaUsuarioMB.pessoaJuridica.complemento}" />
+	</pm:field>
+
+ 	<pm:field>
+	    <p:outputLabel for="telefoneComercial1" value="Telefone Comercial 1:" />
+	    <p:inputText id="telefoneComercial1" value="#{cadastroPessoaUsuarioMB.pessoaJuridica.telefone1}"/>
+	</pm:field>
+
+ 	<pm:field>
+	    <p:outputLabel for="telefoneComercial2" value="Telefone Comercial 2:" />
+	    <p:inputText id="telefoneComercial2" value="#{cadastroPessoaUsuarioMB.pessoaJuridica.telefone2}"/>
+	</pm:field>
+
+
+ 	<pm:field>
+	    <p:outputLabel for="celularWhatsApp" value="Celular/WhatsApp:" />
+	    <p:inputText id="celularWhatsApp" value="#{cadastroPessoaUsuarioMB.pessoaJuridica.telefoneCelularZap}"  />
+	</pm:field>
+	
+	<pm:field>
+	    <p:outputLabel for="emailPJ" value="Email/Login:" />
+	    <p:inputText id="emailPJ" value="#{cadastroPessoaUsuarioMB.pessoaJuridica.usuario.email}" />
+	</pm:field>
+
+	<pm:field>
+		<p:outputLabel value="Senha:"/>
+		<p:password id="senhaPJ" value="#{cadastroPessoaUsuarioMB.pessoaJuridica.usuario.senha}"/>
+	</pm:field>
+	 
+</html>
